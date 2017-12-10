@@ -1,0 +1,17 @@
+theme: jekyll-theme-minimal
+title: Burak Bayrakdar
+description: Story of a millennial
+logo: /assets/img/logo.png
+favicon: /assets/img/favicon.ico
+show_downloads: false
+
+socialmedia:
+  stackoverflow: 
+    profile: https://stackoverflow.com/users/3641067/buræquete?tab=profile
+    flair: https://stackexchange.com/users/flair/4475914.png?theme=clean
+  linkedin: https://www.linkedin.com/in/burakbayrakdar
+  facebook: https://www.facebook.com/buraequete
+  twitter: https://twitter.com/buraequete
+  spotify: https://open.spotify.com/user/11147270574
+  steam: https://steamcommunity.com/id/bureaquete/
+  projecteuler: https://projecteuler.net/profile/buraequete.png
