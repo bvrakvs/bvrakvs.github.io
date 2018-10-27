@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:doc="http://xsltsl.org/xsl/documentation/1.0" xmlns:dt="http://xsltsl.org/date-time" xmlns:str="http://xsltsl.org/string" xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-16">
+    <title>Burak C. Bayrakdar</title>
+    <style type="text/css" id="static">
+    /* Reset browser defaults *//* --------------------------------------------------------------
+    Reset default browser CSS.
+    Based on work by Eric Meyer:
+    * http://meyerweb.com/eric/tools/css/reset/index.html
+    -------------------------------------------------------------- *//* v1.0 | 20080212 */html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+    body {line-height: 1; background: #FFF; text-align: left; font-feature-settings: "liga" 0; -moz-font-feature-settings: "liga" off;}
+    ol, ul {list-style: none;}
+    blockquote, q {quotes: none;}
+    blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+    /* remember to define focus styles! */:focus {outline: 0;}
+    /* remember to highlight inserts somehow! */ins {text-decoration: none;}
+    del {text-decoration: line-through;}
+    /* tables still need 'cellspacing="0"' in the markup */table {border-collapse: collapse; border-spacing: 0;}
+    a img {border: none;}
+    /* Typography */
+    ul, li {list-style-type: disc; margin: 0 0 0 10px; padding: 0;}
+    ul li {margin: 0 0 0 13px; color: #666;}
+    .clear {clear: both; height: 0;}
+    br.clear {line-height: 0;}
+    div.name {font-size: 15px; line-height: 17px; font-weight: bold; padding: 0; text-align: right; text-transform: uppercase; color: #000;}
+    div.logo {display: none;}
+    div.paragraph {position: relative;}
+    div.heading {clear: both; font-weight: bold; color: #000;}
+    div.address {position: relative; text-align: right; font-size: 0.917em; line-height: 1.25em; margin-top: 11px; color: #000;word-wrap: break-word;}
+    div.address2 {position: relative; text-align: left; font-size: 0.917em; line-height: 1.25em;}
+    span.jobtitle, span.companyname, span.degree, span.programline {font-weight: bold;}
+    span.degree, span.programline, span.jobtitle, span.jobdates {color: #000;}
+    span.companyname {font-weight: normal!important;}
+    .datesWrapper {float: right;}
+    .table_wrapper {width: 100%; margin-top: 0;}
+    table.twocol td {width: 50%;}
+    table.skills, table.twocol {width: 100%;}
+    table.skills th, table.skills td {width: 20%; text-align: center;}
+    table.skills th {text-decoration: underline; color: #666;}
+    div#document table.skills td {color: #666;}
+    table.skills .skillname, table.skills .skillrating {text-align: left; width: 35%;}
+    table.skills .skillrating {width: 20%;}
+    table.skills .skillyears, table.skills .skilllast {width: 19%;}
+    table.skills .pad1 {width: 5%;}
+    table.skills .pad2, table.skills .pad3 {width: 1%;}
+    span.paddedline {display: block;}
+    .nodisplay {display: none;}
+    div#document {color: #666;}
+    div#document p font {color: #666!important;}
+    div.SECTION_CNTC {padding-bottom: 6px;}
+    td.twocol_2 {border-left:1px  solid #FEFDFD;}
+      /*Added by Amit for LCMAIN-955*/
+    .adnlLnks li:before{vertical-align: bottom;}
+    .adnlLnks li.first:before {content: "";}
+    div.adnlLnks{text-align: center}
+    .adnlLnks li {list-style-type: disc;display:inline!important;}
+    /*FIX for FORCEFULLY making left margin ZERO for CL*/
+    div#document .sectionCL .paragraph {margin-top: 0!important;}
+  </style>
+    <style type="text/css" id="unparsed">
+      div#document {line-height: {$FTLH}px;}
+      div#document table {line-height: {$FTLH}px;}
+      div#document.pagesize {width: {$DOCW}px;}
+      div#document.vmargins {padding-top: {$TBMR}px; padding-bottom: {$TBMR}px;}
+      div#document.hmargins {padding-left: {$LRMR}px; padding-right: {$LRMR}px;}
+      div#document .section {margin-top: {$SCSP}px;}
+      div#document div.firstsection {margin-top: 0;}
+      div#document div.SECTION_CNTC {margin-top: 0;}
+      div#document div.heading {margin-bottom: {$SHMB}px;}
+      div#document div.paragraph {margin-top: {$PSPC}px;}
+      div#document div.firstparagraph {margin-top: 0;}
+      div#document .singlecolumn, div#document .maincolumn {margin-left: {$PIND}px; width: {$MACW}px;}
+      .fontsize {font-size: {$FTSZ}px;}
+      .fontface {font-family: {$FTFC};}
+      div#document div.sectiontitle {font-size: {$HDSZ}px; line-height: {$HDLH}px;}
+      div.name {font-size: {$NMSZ}px; line-height: {$NMLH}px;}
+      div.address {font-size: {$CISZ}px; line-height: {$CILH}px; margin-top: {$CIMT}px;}
+      div#document table.skills td {padding-top: {$TDMT}px;}
+      div#document div.name,div.address,div#document div.sectiontitle,span.jobdates,span.degree,span.jobtitle{color:{$SDCL}}
+
+      /*FIX for Re-calculating width of singlecolumn for CL*/
+      div#document .sectionCL .singlecolumn {margin-left: 0!important; width: 100%;}
+      div.address2 {font-size: {$FTSZ}px; line-height: {$FTLH}px;}
+  </style>
+    <style type="text/css" id="dynamic">
+      div#document {line-height: 19px;}
+      div#document table {line-height: 19px;}
+      div#document.pagesize {width: 528px;}
+      div#document.vmargins {padding-top: 32px; padding-bottom: 32px;}
+      div#document.hmargins {padding-left: 42px; padding-right: 42px;}
+      div#document .section {margin-top: 12px;}
+      div#document div.firstsection {margin-top: 0;}
+      div#document div.SECTION_CNTC {margin-top: 0;}
+      div#document div.heading {margin-bottom: 6px;}
+      div#document div.paragraph {margin-top: 12px;}
+      div#document div.firstparagraph {margin-top: 0;}
+      div#document .singlecolumn, div#document .maincolumn {margin-left: 0px; width: 528px;}
+      .fontsize {font-size: 11px;}
+      .fontface {font-family: "Century Gothic", Helvetica, sans-serif;}
+      div#document div.sectiontitle {font-size: 14px; line-height: 22px;}
+      div.name {font-size: 31px; line-height: 63px;}
+      div.address {font-size: 10px; line-height: 18px; margin-top: 10px;}
+      div#document table.skills td {padding-top: 6px;}
+      div#document div.name,div.address,div#document div.sectiontitle,span.jobdates,span.degree,span.jobtitle{color:#000000}
+
+      /*FIX for Re-calculating width of singlecolumn for CL*/
+      div#document .sectionCL .singlecolumn {margin-left: 0!important; width: 100%;}
+      div.address2 {font-size: 11px; line-height: 19px;}
+  </style>
+  </head>
+  <body>
+    <div id="document" class="fontsize fontface vmargins hmargins linespacing pagesize">
+      <div id="SECTION_NAME8b3811e9-ba7a-47c8-93fd-ce216c539aa3" class="section firstsection" style="padding-top:0px;">
+        <div id="PARAGRAPH_8b3811e9-ba7a-47c8-93fd-ce216c539aa3_1_01f62501-7bec-4fd3-b8ee-aaae3a4ed74e" class="paragraph PARAGRAPH_NAME firstparagraph" style="padding-top:NaNpx;">
+        <div class="name">
+          <span class="field" id="8b3811e9-ba7a-47c8-93fd-ce216c539aa3FNAM1">Burak C.</span><span></span> <span class="field" id="8b3811e9-ba7a-47c8-93fd-ce216c539aa3LNAM1">Bayrakdar</span>
+        </div>
+      </div>
+      </div>
+      <div id="SECTION_CNTC84a10996-7d4d-4101-9ee0-a72b80a4a31c" class="section SECTION_CNTC" style="padding-top:0px;">
+        <div id="PARAGRAPH_84a10996-7d4d-4101-9ee0-a72b80a4a31c_1_06a0c186-4f47-4ac6-b55c-0063e81b66e6" class="paragraph PARAGRAPH_CNTC firstparagraph" style="padding-top:0px;">
+        <div class="address">
+          <span class="field" id="84a10996-7d4d-4101-9ee0-a72b80a4a31cSTRT1"></span><span class="spaced field" id="84a10996-7d4d-4101-9ee0-a72b80a4a31cCITY1"></span><span class="spaced field" id="84a10996-7d4d-4101-9ee0-a72b80a4a31cSTAT1">Japan</span><span class="spaced field" id="84a10996-7d4d-4101-9ee0-a72b80a4a31cZIPC1"></span>
+          <span> | </span>
+          <span class="field" id="84a10996-7d4d-4101-9ee0-a72b80a4a31cHPHN1"></span>
+          
+          <span class="field" id="84a10996-7d4d-4101-9ee0-a72b80a4a31cCPHN1"></span>
+          
+          <span dependency="EMAI" class="field" id="84a10996-7d4d-4101-9ee0-a72b80a4a31cEMAI1">bureaquete@gmail.com</span>
+
+        
+                    
+                    
+                    
+                </div>
+            </div>
+      </div>
+      <div id="SECTION_ALNKa5927856-fea3-4116-9247-3236617d2f20" class="section SECTION_ALNK" style="padding-top:0px;">
+        <div id="PARAGRAPH_a5927856-fea3-4116-9247-3236617d2f20_1_71ae4204-3ca9-40f2-9a19-6a49f6bf0efa" class="paragraph firstparagraph" style="padding-top:0px;">
+                <div class="adnlLnks singlecolumn">
+                    <ul>
+                        <li class="first"><span class="field" id="a5927856-fea3-4116-9247-3236617d2f20LNK11">www.buræquete.com</span></li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+      </div>
+      <div id="SECTION_SUMM1780dae9-0d68-4cf0-82d3-adcd9c54332d" class="section" style="padding-top:0px;">
+        <div class="heading">
+        <div id="SECTNAME_SUMM1780dae9-0d68-4cf0-82d3-adcd9c54332d" class="sectiontitle">Professional Summary</div>
+      </div>
+        <div id="PARAGRAPH_1780dae9-0d68-4cf0-82d3-adcd9c54332d_1_c5c0b9bb-0d6e-4229-bd1a-9f62cad71a1a" class="paragraph firstparagraph" style="padding-top:0px;">
+        <div class="field singlecolumn" id="1780dae9-0d68-4cf0-82d3-adcd9c54332dFRFM1"><p>Quality-driven Technical Lead well-versed in best practices, and developing innovative technical solutions to diverse issues utilizing Agile methodology. Driven to devise robust solutions that meet changing business demands, and improve software development processes with automation. Prepared to leverage 5+ years' experience to take on new professional challenges and improve technical impact.</p></div>
+      </div>
+      </div>
+      <div id="SECTION_HILT406eb8be-c3bd-4cf9-8a41-29eccb3c5fb8" class="section" style="padding-top:0px;">
+        <div class="heading">
+        <div id="SECTNAME_HILT406eb8be-c3bd-4cf9-8a41-29eccb3c5fb8" class="sectiontitle">Skills</div>
+      </div>
+        <div id="PARAGRAPH_406eb8be-c3bd-4cf9-8a41-29eccb3c5fb8_1_02739468-f776-4ae9-a123-406861ea8f24" class="paragraph firstparagraph" style="padding-top:0px;">
+        <div class="singlecolumn maincolumn">
+          <table class="twocol">
+            <tr>
+              <td class="field twocol_1" id="406eb8be-c3bd-4cf9-8a41-29eccb3c5fb8SKC11"><ul>
+  <li>Web platform development</li>
+  <li>Technical Design</li>
+  <li>Technical specifications creation</li>
+  <li>Database design</li>
+  <li>Task Automation</li>
+</ul></td>
+              <td class="field twocol_2" id="406eb8be-c3bd-4cf9-8a41-29eccb3c5fb8SKC21"><ul>
+  <li>Team Player/Mentor</li>
+  <li>Java/C/C++</li>
+  <li>Oracle/Hibernate/JPA</li>
+  <li>Python</li>
+  <li>*nix/Windows/Android/iOS</li>
+</ul></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      </div>
+      <div id="SECTION_EXPR98883aa8-2354-47d0-ab94-cda43ccfd0e1" class="section" style="padding-top:0px;">
+        <div class="heading">
+        <div id="SECTNAME_EXPR98883aa8-2354-47d0-ab94-cda43ccfd0e1" class="sectiontitle">Work History</div>
+      </div>
+        <div id="PARAGRAPH_98883aa8-2354-47d0-ab94-cda43ccfd0e1_1_6622776d-810d-48b5-8ba6-a7358c75e203" class="paragraph firstparagraph" style="padding-top:0px;">
+        <div class="singlecolumn">
+          <span class="paddedline" style="display: inline;">
+            <span class="jobtitle" id="98883aa8-2354-47d0-ab94-cda43ccfd0e1JTIT1">Technical Lead</span><span></span>
+            <span class="datesWrapper">
+              <span class="jobdates" format="%b %Y" id="98883aa8-2354-47d0-ab94-cda43ccfd0e1JSTD1">Apr 2015</span><span class="jobdates"> - </span>
+              <span class="jobdates" format="%b %Y" id="98883aa8-2354-47d0-ab94-cda43ccfd0e1EDDT1">Current</span>
+            </span>
+          </span><br>
+          <span class="paddedline">
+            <span class="companyname" id="98883aa8-2354-47d0-ab94-cda43ccfd0e1COMP1">Rakuten Travel, Rakuten Inc</span><span></span>
+            <span class="datesWrapper">
+              <span class="joblocation jobcity" id="98883aa8-2354-47d0-ab94-cda43ccfd0e1JCIT1">Tokyo</span><span>, </span>
+              <span class="joblocation jobstate" id="98883aa8-2354-47d0-ab94-cda43ccfd0e1JSTA1">Japan</span><br>
+            </span>
+          </span>
+          <span class="jobline" id="98883aa8-2354-47d0-ab94-cda43ccfd0e1JDES1"><ul>
+  <li>Working as tech lead within back-end division with 15 people across 3 countries.</li>
+  <li>Focusing on technological and design choices for products, and application of business requirements within RESTful cloud based microservices.</li>
+  <li>Stack includes; SpringBoot, Java, JPA, Oracle, Junit, CloudFoundry, Kafka, also Python, Mongo, Redis, Neo4J, Kong, Jenkins, Maven, Ansible, Git, Confluence, Jira, Bitbucket, Intellij</li>
+  <li>Created specialized modules used in most back-end utilizing event handling, OOP, Hibernate, and AOP to encapsulate certain business logic with reduced coupling, and high maintainability.</li>
+  <li>Constant drive for automation of processes, by creating tools for smart object mapping, testing, test data generation, document generation. etc. to reduce cost of development, up to 80% reduction in source code and 30% in man hour in most product development.</li>
+  <li>Helped reduce response time up to 10x to 20x in some APIs, by proper data structure usage, JPA optimization, and redesigning.</li>
+</ul></span>
+        </div>
+      </div>
+        <div id="PARAGRAPH_98883aa8-2354-47d0-ab94-cda43ccfd0e1_2_ac17ebbd-d744-4859-9e07-8700d464c1fe" class="paragraph" style="padding-top:0px;">
+        <div class="singlecolumn">
+          <span class="paddedline" style="display: inline;">
+            <span class="jobtitle" id="98883aa8-2354-47d0-ab94-cda43ccfd0e1JTIT2">Software Engineer</span><span></span>
+            <span class="datesWrapper">
+              <span class="jobdates" format="%b %Y" id="98883aa8-2354-47d0-ab94-cda43ccfd0e1JSTD2">Dec 2013</span><span class="jobdates"> - </span>
+              <span class="jobdates" format="%b %Y" id="98883aa8-2354-47d0-ab94-cda43ccfd0e1EDDT2">Feb 2015</span>
+            </span>
+          </span><br>
+          <span class="paddedline">
+            <span class="companyname" id="98883aa8-2354-47d0-ab94-cda43ccfd0e1COMP2">Garanti Technology, Garanti Bank</span><span></span>
+            <span class="datesWrapper">
+              <span class="joblocation jobcity" id="98883aa8-2354-47d0-ab94-cda43ccfd0e1JCIT2">Istanbul</span><span>, </span>
+              <span class="joblocation jobstate" id="98883aa8-2354-47d0-ab94-cda43ccfd0e1JSTA2">Turkey</span><br>
+            </span>
+          </span>
+          <span class="jobline" id="98883aa8-2354-47d0-ab94-cda43ccfd0e1JDES2"><ul>
+  <li>Involved in a company-wide project aimed at redefining the decade old infrastructure and interface of most operations, creating a cross-platform all-in-one product.</li>
+  <li>Worked with Spring MVC in back-end, creating many banking features into RESTful APIs binding them to JQuery based frond-end.</li>
+  <li>Biggest challenge was creating a mail client within this product, similar to Microsoft OWA, utilizing Outlook API. Lead the design/development, both for back &amp; front end, and communication with Microsoft.</li>
+</ul></span>
+        </div>
+      </div>
+      </div>
+      <div id="SECTION_EDUCd8055435-ee27-48d1-b4de-b1cc98107f06" class="section" style="padding-top:0px;">
+        <div class="heading">
+        <div id="SECTNAME_EDUCd8055435-ee27-48d1-b4de-b1cc98107f06" class="sectiontitle">Education</div>
+      </div>
+        <div id="PARAGRAPH_d8055435-ee27-48d1-b4de-b1cc98107f06_1_0d390def-a8ef-418b-8157-6d58b3e2a246" class="paragraph firstparagraph" style="padding-top:0px;">
+        <div class="singlecolumn">
+          <span class="paddedline">
+            <span class="degree" id="d8055435-ee27-48d1-b4de-b1cc98107f06DGRE1">Young Scientist Exchange Program</span><span>: </span>
+            <span class="programline" id="d8055435-ee27-48d1-b4de-b1cc98107f06STUY1">Network Visualization & Quantum Computing</span><span></span>
+            <span class="datesWrapper">
+              <span class="jobdates" id="d8055435-ee27-48d1-b4de-b1cc98107f06GRYR1">08/2013</span>
+            </span><br>
+          </span>
+          <span class="paddedline">
+            <span class="companyname companyname_educ" id="d8055435-ee27-48d1-b4de-b1cc98107f06SCHO1">Tokyo Institute Of Technology</span><span></span>
+            <span class="datesWrapper">
+              <span class="joblocation jobcity" id="d8055435-ee27-48d1-b4de-b1cc98107f06SCIT1">Japan</span>
+              <span class="joblocation jobstate" id="d8055435-ee27-48d1-b4de-b1cc98107f06SSTA1"></span>
+            </span><br>
+          </span>
+          
+          <span class="field" id="d8055435-ee27-48d1-b4de-b1cc98107f06FRFM1"><ul>
+  <li>Recipient of JASSO Scholarship for one semester</li>
+</ul></span>
+        </div>
+      </div>
+        <div id="PARAGRAPH_d8055435-ee27-48d1-b4de-b1cc98107f06_2_227486d8-0d2a-4af6-bc4e-e86f5a1b04de" class="paragraph" style="padding-top:0px;">
+        <div class="singlecolumn">
+          <span class="paddedline">
+            <span class="degree" id="d8055435-ee27-48d1-b4de-b1cc98107f06DGRE2">Bachelor of Science</span><span>: </span>
+            <span class="programline" id="d8055435-ee27-48d1-b4de-b1cc98107f06STUY2">Computer Engineering</span><span></span>
+            <span class="datesWrapper">
+              <span class="jobdates" id="d8055435-ee27-48d1-b4de-b1cc98107f06GRYR2">07/2013</span>
+            </span><br>
+          </span>
+          <span class="paddedline">
+            <span class="companyname companyname_educ" id="d8055435-ee27-48d1-b4de-b1cc98107f06SCHO2">Middle East Technical University</span><span></span>
+            <span class="datesWrapper">
+              <span class="joblocation jobcity" id="d8055435-ee27-48d1-b4de-b1cc98107f06SCIT2">Ankara/Northern Cyprus</span>
+              <span class="joblocation jobstate" id="d8055435-ee27-48d1-b4de-b1cc98107f06SSTA2"></span>
+            </span><br>
+          </span>
+          
+          <span class="field" id="d8055435-ee27-48d1-b4de-b1cc98107f06FRFM2"><ul>
+  <li>Graduated top in computer engineering department with 3.64 GPA, 5th in all engineering.</li>
+  <li>Awarded "Dean's High Honor" during all semesters</li>
+  <li>Thesis: 8/16 bit processor and ISA design project (w/o pipelining)</li>
+  <li>Project: Campus Guide Mobile Application</li>
+  <li>Project: Human face recognition system with MATLAB</li>
+  <li>Project: Masterless Database-centric Grid Network</li>
+</ul></span>
+        </div>
+      </div>
+        <div id="PARAGRAPH_d8055435-ee27-48d1-b4de-b1cc98107f06_3_af05a1ef-2dfb-4739-91de-1152ffd1fe9f" class="paragraph" style="padding-top:0px;">
+        <div class="singlecolumn">
+          <span class="paddedline">
+            <span class="degree" id="d8055435-ee27-48d1-b4de-b1cc98107f06DGRE3">Erasmus Exchange Program</span>
+            <span class="programline" id="d8055435-ee27-48d1-b4de-b1cc98107f06STUY3"></span>
+            <span class="datesWrapper">
+              <span class="jobdates" id="d8055435-ee27-48d1-b4de-b1cc98107f06GRYR3">01/2011</span>
+            </span><br>
+          </span>
+          <span class="paddedline">
+            <span class="companyname companyname_educ" id="d8055435-ee27-48d1-b4de-b1cc98107f06SCHO3">Uppsala University</span><span></span>
+            <span class="datesWrapper">
+              <span class="joblocation jobcity" id="d8055435-ee27-48d1-b4de-b1cc98107f06SCIT3">Sweden</span>
+              <span class="joblocation jobstate" id="d8055435-ee27-48d1-b4de-b1cc98107f06SSTA3"></span>
+            </span><br>
+          </span>
+          
+          <span class="field" id="d8055435-ee27-48d1-b4de-b1cc98107f06FRFM3"><ul>
+  <li>Recipient of Erasmus Scholarship for one semester</li>
+</ul></span>
+        </div>
+      </div>
+      </div>
+      <div id="SECTION_INTRb019fe59-b0e3-4988-bfc4-40cf04d6bc2c" class="section" style="padding-top:0px;">
+        <div class="heading">
+        <div id="SECTNAME_INTRb019fe59-b0e3-4988-bfc4-40cf04d6bc2c" class="sectiontitle">Interests</div>
+      </div>
+        <div id="PARAGRAPH_b019fe59-b0e3-4988-bfc4-40cf04d6bc2c_1_a33cca9f-8c3d-4514-9d11-0b3b8768388d" class="paragraph firstparagraph" style="padding-top:NaNpx;">
+        <div class="field singlecolumn" id="b019fe59-b0e3-4988-bfc4-40cf04d6bc2cFRFM1"><p>History, Gaming, Reading, Workout/Jogging, Stackoverflow/ProjectEuler, amateur game development</p></div>
+      </div>
+      </div>
+      <div id="SECTION_ADDI3190cc19-974c-43f5-9070-f96a9f1c3869" class="section" style="padding-top:0px;">
+        <div class="heading">
+        <div id="SECTNAME_ADDI3190cc19-974c-43f5-9070-f96a9f1c3869" class="sectiontitle">Additional Information</div>
+      </div>
+        <div id="PARAGRAPH_3190cc19-974c-43f5-9070-f96a9f1c3869_1_4dfeba87-ab42-48ad-b709-abb535052fc1" class="paragraph firstparagraph" style="padding-top:NaNpx;">
+        <div class="field singlecolumn" id="3190cc19-974c-43f5-9070-f96a9f1c3869FRFM1"><ul>
+  <li>TOEFL examination 108/120 (2015)</li>
+</ul></div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
