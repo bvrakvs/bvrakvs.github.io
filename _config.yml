@@ -1,12 +1,12 @@
 theme: jekyll-theme-minimal
 title: Burak Bayrakdar
 description: >
-Constantinopolitan ☧ ⌇ 
-<img class="emoji" src="/assets/img/emoji/nl.png">
-<img class="emoji" src="/assets/img/emoji/jp.png">
-<img class="emoji" src="/assets/img/emoji/se.png">
-<img class="emoji" src="/assets/img/emoji/cy.png">
-<img class="emoji" src="/assets/img/emoji/tr.png">
+  Constantinopolitan ☧ ⌇ 
+  <img class="emoji" src="/assets/img/emoji/nl.png">
+  <img class="emoji" src="/assets/img/emoji/jp.png">
+  <img class="emoji" src="/assets/img/emoji/se.png">
+  <img class="emoji" src="/assets/img/emoji/cy.png">
+  <img class="emoji" src="/assets/img/emoji/tr.png">
 logo: /assets/img/logo.png
 favicon: /assets/img/favicon.ico
 show_downloads: false
